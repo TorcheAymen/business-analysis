@@ -6,7 +6,8 @@ import {
   AlertCircle,
   ArrowRight,
   MousePointer2,
-  History
+  History,
+  Gauge
 } from 'lucide-react';
 
 const ExperienceMapPage: React.FC = () => {
@@ -20,12 +21,8 @@ const ExperienceMapPage: React.FC = () => {
         "Est-ce que j’ai bien compris le besoin ?",
         "Est-ce que j’ai posé toutes les bonnes questions ?"
       ],
-      feelings: [
-        { t: "Peur d'oublier", e: "😟" },
-        { t: "Confiant", e: "😎" },
-        { t: "Méfiant", e: "🤨" },
-        { t: "Satisfait", e: "😊" }
-      ],
+      frustrationScore: 4,
+      frustrationLevel: "Modérée",
       experience: [
         "Recentrer le flux sur les objectifs réels",
         "Mélange besoins/solutions du métier",
@@ -36,9 +33,11 @@ const ExperienceMapPage: React.FC = () => {
         "Difficulté de structuration",
         "Oublis possible (liés aux 2 points précédents)"
       ],
-      opportunities: [  "Guidage dynamique de l'entretien avec rappels de points à couvrir",
-  "Système de reformulation automatique pour valider la compréhension",
-  "Détection automatique d'infos manquantes dans les notes"]
+      opportunities: [
+        "Guidage dynamique de l'entretien avec rappels de points à couvrir",
+        "Système de reformulation automatique pour valider la compréhension",
+        "Détection automatique d'infos manquantes dans les notes"
+      ]
     },
     {
       title: "2. Cerner le Périmètre du SI",
@@ -50,11 +49,8 @@ const ExperienceMapPage: React.FC = () => {
         "Est-ce que cet acteur est interne ou externe à mon SI ?",
         "Est-ce que je ne confonds pas un utilisateur avec un partenaire externe ?"
       ],
-      feelings: [
-        { t: "Peur (oublis)", e: "😰" },
-        { t: "Doute (ext/int)", e: "🤔" },
-        { t: "Frustré", e: "😤" }
-      ],
+      frustrationScore: 6,
+      frustrationLevel: "Significative",
       experience: [
         "Mode de transmission imprécis",
         "Automatisme de découpage erroné",
@@ -66,9 +62,11 @@ const ExperienceMapPage: React.FC = () => {
         "Manque de vision transverse",
         "Oublis par fatigue"
       ],
-      opportunities: [  "Suggestions d'acteurs et de flux selon contexte projet",
-  "Aide à la distinction entre acteur interne/externe et flux info/physique",
-  "Validation automatique de la couverture du périmètre SI"]
+      opportunities: [
+        "Suggestions d'acteurs et de flux selon contexte projet",
+        "Aide à la distinction entre acteur interne/externe et flux info/physique",
+        "Validation automatique de la couverture du périmètre SI"
+      ]
     },
     {
       title: "3. Formaliser les besoins et vérifier leur cohérence fonctionnelle",
@@ -79,12 +77,8 @@ const ExperienceMapPage: React.FC = () => {
         "Sont-elles actionnables dans un processus métier ?",
         "Est-ce que cette fonction apporte de la valeur ajoutée réelle (KPI/OKR) ?"
       ],
-      feelings: [
-        { t: "Stress (Phase clé)", e: "😰" },
-        { t: "Fatigue (manuel)", e: "😩" },
-        { t: "Plaisir", e: "☺️" },
-        { t: "Frustration", e: "🤬" }
-      ],
+      frustrationScore: 9,
+      frustrationLevel: "Critique",
       experience: [
         "Données formulées différemment",
         "Omissions par fatigue/pression",
@@ -97,9 +91,11 @@ const ExperienceMapPage: React.FC = () => {
         "Etape clé : Stress, fatigue, charge mentale",
         "Erreurs ralentissant le projet"
       ],
-      opportunities: [  "Vérification automatique de la couverture des besoins dans les modèles",
-  "Alertes sur les fonctions orphelines ou mal reliées",
-  "Aide à la formalisation structurée des exigences et cas d'usage"]
+      opportunities: [
+        "Vérification automatique de la couverture des besoins dans les modèles",
+        "Alertes sur les fonctions orphelines ou mal reliées",
+        "Aide à la formalisation structurée des exigences et cas d'usage"
+      ]
     },
     {
       title: "4. Cartographier les processus BPMN",
@@ -110,12 +106,8 @@ const ExperienceMapPage: React.FC = () => {
         "Existe-t-il une incohérence que je n’ai pas encore détectée ?",
         "Comment fiabiliser mon analyse sans multiplier les contrôles manuels ?"
       ],
-      feelings: [
-        { t: "Exigent", e: "🧐" },
-        { t: "Frustré (cloisonnement)", e: "😤" },
-        { t: "Soulagé", e: "😌" },
-        { t: "Espoir", e: "🤞" }
-      ],
+      frustrationScore: 8,
+      frustrationLevel: "Élevée",
       experience: [
         "Vérifications manuelles longues",
         "Outils cloisonnés (Bizagi/Merise)",
@@ -128,9 +120,11 @@ const ExperienceMapPage: React.FC = () => {
         "Vision fragmentée",
         "Liens US non automatisés"
       ],
-      opportunities: [  "Contrôle automatique de la couverture des user stories par les activités BPMN",
-  "Détection des processus incomplets ou mal reliés aux exigences",
-  "Visualisation consolidée BPMN + exigences + US"]
+      opportunities: [
+        "Contrôle automatique de la couverture des user stories par les activités BPMN",
+        "Détection des processus incomplets ou mal reliés aux exigences",
+        "Visualisation consolidée BPMN + exigences + US"
+      ]
     },
     {
       title: "5. Formaliser les données",
@@ -142,12 +136,8 @@ const ExperienceMapPage: React.FC = () => {
         "Mon MCD respecte-t-il la logique du BPMN ?",
         "Mon MCD est-il simple, clair et facilement compréhensible ?"
       ],
-      feelings: [
-        { t: "Peur (oublis)", e: "😰" },
-        { t: "Stress (MCD)", e: "😰" },
-        { t: "Lassitude", e: "😴" },
-        { t: "Plaisir", e: "🥰" }
-      ],
+      frustrationScore: 7,
+      frustrationLevel: "Élevée",
       experience: [
         "Données omises (temps)",
         "Chronophagie du MCD complexe",
@@ -158,9 +148,11 @@ const ExperienceMapPage: React.FC = () => {
         "MCD chronophage",
         "Complexité inutile"
       ],
-      opportunities: [  "Lien automatique entre dictionnaire de données et MCD",
-  "Alerte sur entités isolées, attributs faibles ou mal définis",
-  "Vérification de cohérence MCD ↔ BPMN ↔ Exigences"]
+      opportunities: [
+        "Lien automatique entre dictionnaire de données et MCD",
+        "Alerte sur entités isolées, attributs faibles ou mal définis",
+        "Vérification de cohérence MCD ↔ BPMN ↔ Exigences"
+      ]
     }
   ];
 
@@ -178,7 +170,7 @@ const ExperienceMapPage: React.FC = () => {
         <div className="flex flex-col">
           {/* HEADER */}
           <div className="flex bg-slate-900 text-white sticky top-0 z-10">
-            <div className="w-[8%] p-4 border-r border-slate-700 flex items-center justify-center italic text-[9px] text-slate-500 uppercase tracking-widest">Étapes</div>
+            <div className="w-[8%] p-4 border-r border-slate-700 flex items-center justify-center italic text-[9px] text-slate-500 uppercase tracking-widest text-center">Étapes</div>
             {steps.map((step, i) => (
               <div key={i} className="flex-1 p-5 text-center border-r border-slate-700 last:border-r-0">
                 <p className="text-[10px] font-black uppercase text-blue-400 mb-1">Phase 0{i+1}</p>
@@ -223,19 +215,29 @@ const ExperienceMapPage: React.FC = () => {
             ))}
           </div>
 
-          {/* FEELINGS */}
+          {/* FRUSTRATION GAUGE */}
           <div className="flex border-b border-slate-200">
             <div className="w-[8%] p-4 bg-slate-50 border-r border-slate-300 flex flex-col items-center justify-center gap-1 shrink-0">
-              <Smile className="w-5 h-5 text-blue-600" />
-              <span className="text-[8px] font-black uppercase text-center leading-none">Ressenti</span>
+              <Gauge className="w-5 h-5 text-rose-600" />
+              <span className="text-[8px] font-black uppercase text-center leading-none text-rose-600">Niveau de Frustration</span>
             </div>
             {steps.map((step, i) => (
-              <div key={i} className="flex-1 p-6 border-r border-slate-100 last:border-r-0 flex flex-wrap gap-2 content-start">
-                {step.feelings.map((f, j) => (
-                  <div key={j} className="flex items-center gap-1.5 bg-white border border-slate-200 px-3 py-1.5 rounded-full text-[11px] font-bold text-slate-700 shadow-sm">
-                    <span className="text-base">{f.e}</span> {f.t}
-                  </div>
-                ))}
+              <div key={i} className="flex-1 p-6 border-r border-slate-100 last:border-r-0 flex flex-col justify-center gap-2">
+                <div className="flex justify-between items-center text-[10px] font-bold uppercase tracking-tighter">
+                  <span className={step.frustrationScore >= 8 ? "text-rose-600" : "text-slate-600"}>
+                    {step.frustrationLevel}
+                  </span>
+                  <span className="text-slate-400">{step.frustrationScore}/10</span>
+                </div>
+                <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                  <div 
+                    className={`h-full transition-all duration-500 ${
+                      step.frustrationScore >= 8 ? "bg-rose-500" : 
+                      step.frustrationScore >= 6 ? "bg-orange-500" : "bg-blue-500"
+                    }`}
+                    style={{ width: `${step.frustrationScore * 10}%` }}
+                  ></div>
+                </div>
               </div>
             ))}
           </div>
