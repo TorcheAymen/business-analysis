@@ -5,101 +5,123 @@ import {
   Zap, 
   AlertCircle,
   ArrowRight,
-  MousePointer2
+  MousePointer2,
+  History
 } from 'lucide-react';
 
 const ExperienceMapPage: React.FC = () => {
   const steps = [
     {
-      title: "1. Interview & Métier",
+      title: "1. Interview Métier",
       actions: ["Préparer l'entretien", "Animer l'interview", "Notes structurées"],
       thoughts: [
-        "Quels sont les vrais objectifs métier ?",
-        "Impact sur les processus ?",
-        "Est-ce que j’ai bien compris le besoin ?",
-        "Ais-je posé les bonnes questions ?"
+        "Vrais objectifs métier ?",
+        "Impact processus & données ?",
+        "Bien compris le besoin ?",
+        "Bonnes questions posées ?"
       ],
       feelings: [
         { t: "Peur d'oublier", e: "😟" },
-        { t: "Confiant (expérience)", e: "😎" },
-        { t: "Méfiant (imprécisions)", e: "🤨" },
-        { t: "Satisfait (réponses)", e: "😊" }
+        { t: "Confiant", e: "😎" },
+        { t: "Méfiant", e: "🤨" },
+        { t: "Satisfait", e: "😊" }
       ],
-      experience: ["Interrompre pour recentrer", "Mélange besoins/solutions", "Difficulté de structuration"],
-      opportunities: ["Aide à la reformulation", "Formalisation interview", "Alertes infos manquantes"]
+      experience: [
+        "Recentrer le flux sur les objectifs réels",
+        "Mélange besoins/solutions du métier",
+        "Difficulté à structurer à chaud"
+      ],
+      opportunities: ["Reformulation & Validation", "Formalisation interview", "Alertes infos manquantes"]
     },
     {
       title: "2. Périmètre du SI",
-      actions: ["Délimiter le domaine", "Recenser les acteurs", "Identifier les flux", "Construire le MFC"],
+      actions: ["Domaine d'étude", "Acteurs externes", "Flux d'infos", "MFC", "Nature des échanges"],
       thoughts: [
-        "Oubli d'un acteur caché ?",
-        "L'info rentre ou sort ?",
-        "Canal : mail, téléphone ?",
-        "Acteur interne ou externe ?",
+        "Acteur caché ?",
+        "Info rentre ou sort ?",
+        "Canal utilisé ?",
+        "Interne ou externe ?",
         "Confusion utilisateur vs partenaire"
       ],
       feelings: [
-        { t: "Peur (oubli flux)", e: "😰" },
-        { t: "Doute (interne/externe)", e: "🤔" },
-        { t: "Frustré (incomplet)", e: "😤" }
+        { t: "Peur (oublis)", e: "😰" },
+        { t: "Doute (ext/int)", e: "🤔" },
+        { t: "Frustré", e: "😤" }
       ],
-      experience: ["Transmission non précisée", "Découpage 'par habitude'", "Oublis par fatigue"],
-      opportunities: ["Rigueur Flux Physique vs Info", "Distinction nette acteur ext/int"]
+      experience: [
+        "Mode de transmission imprécis",
+        "Automatisme de découpage erroné",
+        "Oublis par fatigue ou pression"
+      ],
+      opportunities: ["Rigueur Flux Physique vs Info", "Distinction Acteur Ext/Int"]
     },
     {
       title: "3. Besoins & Fonctions",
-      actions: ["Matrices SWOT/PESTEL", "Vérifier cohérence MCD/BPMN", "Analyse audio/texte"],
+      actions: ["Audio/Texte interview", "Matrices SWOT/PESTEL", "Cohérence MCD/BPMN"],
       thoughts: [
-        "Besoin utilisateur vs tactique ?",
-        "Présence dans les flux ?",
-        "Actionnable dans un processus ?",
-        "Valeur ajoutée (KPI/OKR) ?"
+        "Besoin ou tactique ?",
+        "Présent dans les flux ?",
+        "Actionnable processus ?",
+        "Valeur ajoutée (KPI) ?"
       ],
       feelings: [
         { t: "Stress (Phase clé)", e: "😰" },
-        { t: "Fatigue (tâches lourdes)", e: "😩" },
-        { t: "Plaisir (cohérence)", e: "☺️" },
-        { t: "Frustration (incohérence)", e: "🤬" }
+        { t: "Fatigue (manuel)", e: "😩" },
+        { t: "Plaisir", e: "☺️" },
+        { t: "Frustration", e: "🤬" }
       ],
-      experience: ["Données formulées différemment", "Données omises (pression)", "Erreurs ralentissant le projet"],
-      opportunities: ["Gain de temps/énergie", "Gain d'assurance", "Zéro erreur d'inattention"]
+      experience: [
+        "Données formulées différemment",
+        "Omissions par fatigue/pression",
+        "Erreurs d'expérience (ralentissement)"
+      ],
+      opportunities: ["Gain de temps & énergie", "Assurance augmentée", "Zéro inattention"]
     },
     {
-      title: "4. Formaliser les processus",
-      actions: ["Définir événements/acteurs", "Couloirs BPMN", "Lien US / Exigences", "Vérifier cohérence"],
+      title: "4. Processus BPMN",
+      actions: ["Événements/Acteurs", "Couloirs BPMN", "Liens US/Exigences", "Modélisation"],
       thoughts: [
         "Toutes les US couvertes ?",
-        "Activités inutiles ?",
+        "Activités injustifiées ?",
         "Incohérence non détectée ?",
-        "Comment fiabiliser sans manuel ?"
+        "Fiabilisation auto ?"
       ],
       feelings: [
-        { t: "Exigent (précision)", e: "🧐" },
+        { t: "Exigent", e: "🧐" },
         { t: "Frustré (cloisonnement)", e: "😤" },
         { t: "Soulagé", e: "😌" },
-        { t: "Espoir (couverture)", e: "🤞" }
+        { t: "Espoir", e: "🤞" }
       ],
-      experience: ["Vérifications manuelles longues", "Outils cloisonnés", "Vision fragmentée", "Liens US non automatisés"],
-      opportunities: ["Gain de temps contrôle", "Vision 360° du cadre", "Fiabilité pré-développement"]
+      experience: [
+        "Vérifications manuelles longues",
+        "Outils cloisonnés (Bizagi/Merise)",
+        "Manque de vision consolidée",
+        "Liens US/Exigences non automatisés"
+      ],
+      opportunities: ["Gain de temps contrôle", "Cadre de travail structuré", "Fiabilité pré-dev"]
     },
     {
-      title: "5. Formaliser les données",
-      actions: ["Identification données métier", "Dictionnaire des données", "Structuration entités", "Modélisation MCD"],
+      title: "5. Formalisation Données",
+      actions: ["Dictionnaire données", "Structuration entités", "Modélisation MCD"],
       thoughts: [
-        "Données identifiées correctly ?",
+        "Données identifiées ?",
         "Entités pertinentes ?",
-        "Concordance Dico vs MCD ?",
-        "MCD respecte le BPMN ?",
-        "MCD simple et clair ?"
+        "Dico vs MCD ?",
+        "MCD respecte BPMN ?",
+        "MCD simple ?"
       ],
       feelings: [
-        { t: "Peur (oubli données)", e: "😰" },
-        { t: "Stress (réalisation MCD)", e: "😰" },
-        { t: "Lassitude (outils non opti)", e: "😴" },
-        { t: "Plaisir (reflète BPMN)", e: "🥰" }
+        { t: "Peur (oublis)", e: "😰" },
+        { t: "Stress (MCD)", e: "😰" },
+        { t: "Lassitude", e: "😴" },
+        { t: "Plaisir", e: "🥰" }
       ],
-      experience: ["Données omises", "MCD chronophage", "Complexité inutile"],
-      opportunities: ["Concordance Acteurs/BPMN", "Alerte oublis (attributs)", "Unicité Dico et MCD"]
+      experience: [
+        "Données omises (temps)",
+        "Chronophagie du MCD complexe",
+        "Complexité inutile"
+      ],
+      opportunities: ["Concordance Acteurs/BPMN", "Alertes attributs faibles", "Unicité Dico/MCD"]
     }
   ];
 
@@ -107,19 +129,17 @@ const ExperienceMapPage: React.FC = () => {
     <div className="p-4 bg-slate-100 min-h-screen font-['Inter']">
       <div className="max-w-[1920px] mx-auto bg-white shadow-2xl border border-slate-300">
         
-        {/* HEADER SIMPLE */}
         <div className="p-8 border-b-4 border-slate-900 bg-white">
           <h1 className="text-5xl font-black tracking-tighter uppercase text-slate-900">
             Experience Map <span className="text-blue-600">Analyste SI</span>
           </h1>
-          <p className="text-lg font-light text-slate-500 tracking-[0.4em] uppercase mt-1">Conception de Système d'Information</p>
+          <p className="text-lg font-light text-slate-500 tracking-[0.4em] uppercase mt-1">Diagnostic du Workflow de Conception</p>
         </div>
 
-        {/* GRID TABLE */}
-        <div className="flex flex-col overflow-x-hidden">
-          {/* HEADER STEPS - Grid 14 cols (2 pour légende, 12 pour étapes / 5) */}
+        <div className="flex flex-col">
+          {/* HEADER */}
           <div className="flex bg-slate-900 text-white sticky top-0 z-10">
-            <div className="w-[8%] p-4 border-r border-slate-700 flex items-center justify-center italic text-[9px] text-slate-500 uppercase">Étapes</div>
+            <div className="w-[8%] p-4 border-r border-slate-700 flex items-center justify-center italic text-[9px] text-slate-500 uppercase tracking-widest">Étapes</div>
             {steps.map((step, i) => (
               <div key={i} className="flex-1 p-5 text-center border-r border-slate-700 last:border-r-0">
                 <p className="text-[10px] font-black uppercase text-blue-400 mb-1">Phase 0{i+1}</p>
@@ -148,7 +168,7 @@ const ExperienceMapPage: React.FC = () => {
           </div>
 
           {/* THOUGHTS */}
-          <div className="flex border-b border-slate-200 bg-white">
+          <div className="flex border-b border-slate-200">
             <div className="w-[8%] p-4 bg-slate-50 border-r border-slate-300 flex flex-col items-center justify-center gap-1 shrink-0">
               <Brain className="w-5 h-5 text-blue-600" />
               <span className="text-[8px] font-black uppercase text-center leading-none">Pensées</span>
@@ -157,7 +177,7 @@ const ExperienceMapPage: React.FC = () => {
               <div key={i} className="flex-1 p-6 border-r border-slate-100 last:border-r-0">
                 <ul className="space-y-3">
                   {step.thoughts.map((t, j) => (
-                    <li key={j} className="text-[11px] text-slate-600 italic bg-slate-50 p-2.5 border-l-2 border-slate-300 leading-normal">"{t}"</li>
+                    <li key={j} className="text-[11px] text-slate-600 italic bg-slate-50 p-2.5 border-l-2 border-slate-300">"{t}"</li>
                   ))}
                 </ul>
               </div>
@@ -173,7 +193,7 @@ const ExperienceMapPage: React.FC = () => {
             {steps.map((step, i) => (
               <div key={i} className="flex-1 p-6 border-r border-slate-100 last:border-r-0 flex flex-wrap gap-2 content-start">
                 {step.feelings.map((f, j) => (
-                  <div key={j} className="flex items-center gap-1.5 bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-full text-[11px] font-bold text-slate-700 shadow-sm">
+                  <div key={j} className="flex items-center gap-1.5 bg-white border border-slate-200 px-3 py-1.5 rounded-full text-[11px] font-bold text-slate-700 shadow-sm">
                     <span className="text-base">{f.e}</span> {f.t}
                   </div>
                 ))}
@@ -184,18 +204,31 @@ const ExperienceMapPage: React.FC = () => {
           {/* EXPERIENCE */}
           <div className="flex border-b border-slate-200 bg-white">
             <div className="w-[8%] p-4 bg-slate-50 border-r border-slate-300 flex flex-col items-center justify-center gap-1 shrink-0">
-              <AlertCircle className="w-5 h-5 text-rose-600" />
-              <span className="text-[8px] font-black uppercase text-center leading-none text-rose-600">Douleurs</span>
+              <History className="w-5 h-5 text-blue-600" />
+              <span className="text-[8px] font-black uppercase text-center leading-none">Expérience</span>
             </div>
             {steps.map((step, i) => (
               <div key={i} className="flex-1 p-6 border-r border-slate-100 last:border-r-0">
                 <ul className="space-y-3">
                   {step.experience.map((e, j) => (
-                    <li key={j} className="text-[12px] text-slate-700 font-medium flex items-start gap-2">
-                      <div className="w-2 h-2 rounded-full bg-rose-400 mt-1.5 shrink-0"></div> {e}
+                    <li key={j} className="text-[12px] text-slate-700 font-medium flex items-start gap-2 bg-blue-50/20 p-2 rounded">
+                      <ArrowRight className="w-3 h-3 text-blue-400 mt-1 shrink-0" /> {e}
                     </li>
                   ))}
                 </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* PAIN POINTS (DOULEURS) */}
+          <div className="flex border-b border-slate-200">
+            <div className="w-[8%] p-4 bg-slate-50 border-r border-slate-300 flex flex-col items-center justify-center gap-1 shrink-0">
+              <AlertCircle className="w-5 h-5 text-rose-600" />
+              <span className="text-[8px] font-black uppercase text-center leading-none text-rose-600">Freins</span>
+            </div>
+            {steps.map((step, i) => (
+              <div key={i} className="flex-1 p-6 border-r border-slate-100 last:border-r-0 italic text-[11px] text-slate-400">
+                Risque d'incohérence élevé sur cette phase.
               </div>
             ))}
           </div>
@@ -211,7 +244,7 @@ const ExperienceMapPage: React.FC = () => {
                 <ul className="space-y-3">
                   {step.opportunities.map((o, j) => (
                     <li key={j} className="text-[12px] font-black text-blue-900 flex items-center gap-3">
-                      <ArrowRight className="w-4 h-4 text-blue-600 shrink-0" /> {o}
+                      <Zap className="w-4 h-4 text-blue-600 shrink-0" /> {o}
                     </li>
                   ))}
                 </ul>
@@ -219,16 +252,6 @@ const ExperienceMapPage: React.FC = () => {
             ))}
           </div>
         </div>
-
-        {/* FOOTER */}
-        <footer className="p-6 bg-slate-900 text-white flex justify-between items-center text-[10px] font-bold uppercase tracking-[0.2em]">
-          <div>Diagnostic Expert — Référentiel Analyste SI</div>
-          <div className="flex gap-10">
-            <span className="text-blue-400">Cohérence Métier</span>
-            <span className="text-blue-400">Intégrité Données</span>
-            <span className="text-blue-400">Optimisation Flux</span>
-          </div>
-        </footer>
       </div>
     </div>
   );
