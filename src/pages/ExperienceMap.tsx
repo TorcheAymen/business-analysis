@@ -220,7 +220,7 @@ const ExperienceMapPage: React.FC = () => {
             ))}
           </div>
 
-          {/* PAIN POINTS (DOULEURS) */}
+          {/* PAIN POINTS (FREINS) */}
           <div className="flex border-b border-slate-200">
             <div className="w-[8%] p-4 bg-slate-50 border-r border-slate-300 flex flex-col items-center justify-center gap-1 shrink-0">
               <AlertCircle className="w-5 h-5 text-rose-600" />
