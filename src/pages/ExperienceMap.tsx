@@ -72,7 +72,7 @@ const ExperienceMapPage: React.FC = () => {
     },
     {
       title: "3. Formaliser les besoins et vérifier leur cohérence fonctionnelle",
-      actions: ["Etudier l'interview, extraire les besoins.", "aligner les fonctionnalités sur les exigences", "Vérifier la cohérence MFC/MCD/BPMN"],
+      actions: ["Etudier l'interview, extraire les besoins.", "aligner les fonctionnalités sur les exigences", "Vérifier la cohérence MFC/MCD/BPMN existants"],
       thoughts: [
         "Est-ce que les fonctionnalités répondent à un besoin utilisateur ou tactique ?",
         "Mes fonctionnalités sont-elles présentes dans les flux et porteuses de données ?",
