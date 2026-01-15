@@ -75,7 +75,7 @@ const App: React.FC = () => {
             {/* Caractéristiques de l'analyse */}
             <section className="border-t border-slate-100 pt-6">
               <h3 className="text-xs font-black uppercase tracking-[0.3em] mb-4 text-blue-600 flex items-center gap-2">
-                <Activity className="w-3 h-3" /> Analyse académique
+                <Activity className="w-3 h-3" /> Méthode d’analyse
               </h3>
               <div className="space-y-3">
                 {[

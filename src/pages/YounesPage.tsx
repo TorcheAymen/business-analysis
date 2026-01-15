@@ -75,7 +75,7 @@ const App: React.FC = () => {
             {/* Caractéristiques de l'analyse */}
             <section className="border-t border-slate-100 pt-6">
               <h3 className="text-xs font-black uppercase tracking-[0.3em] mb-4 text-blue-600 flex items-center gap-2">
-                <Activity className="w-3 h-3" /> Analyse & Méthodologie
+                <Activity className="w-3 h-3" /> Méthode d’analyse
               </h3>
               <div className="space-y-3">
                 {[
@@ -97,7 +97,7 @@ const App: React.FC = () => {
             {/* Outils Section */}
             <section className="bg-slate-900 p-6 text-white rounded-sm mt-auto">
               <h3 className="text-xs font-black uppercase tracking-[0.3em] mb-4 flex items-center gap-2">
-                <Wrench className="w-3 h-3" /> Stack Outils
+                <Wrench className="w-3 h-3" /> Outils Métiers
               </h3>
               <div className="grid grid-cols-2 gap-x-4 gap-y-2">
                 {[

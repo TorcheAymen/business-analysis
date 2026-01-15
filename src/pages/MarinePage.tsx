@@ -28,7 +28,7 @@ const App: React.FC = () => {
               Marine Arnauld
             </h1>
             <p className="text-xl font-light text-blue-600 tracking-widest uppercase">
-              Senior Business Analyst
+            Business Analyst Senior
             </p>
           </div>
         </header>
@@ -140,11 +140,11 @@ const App: React.FC = () => {
                   </h3>
                   <ul className="space-y-3">
                     {[
-                      "Qualité des livrables : garantir la cohérence entre exigences, processus métier et données",
-                      "Réduction des erreurs : limiter les retours en développement et les coûts de refactoring",
-                      "Décision éclairée : appuyer les choix projet sur des modèles fiables et traçables",
-                      "Gain de temps : réduire le temps de validation sans sacrifier la rigueur",
-                      "Collaboration : faciliter l’alignement entre équipes métier, produit et techniques"
+                      "Garantir la cohérence entre exigences, processus métier et données",
+                      "Limiter les retours en développement et les coûts de refactoring",
+                      "Appuyer les choix projet sur des modèles fiables et traçables",
+                      "Réduire le temps de validation sans sacrifier la rigueur",
+                      "Faciliter l’alignement entre équipes métier, produit et techniques"
                     ].map((goal, i) => (
                       <li key={i} className="flex items-start gap-2 text-[10px] text-slate-600 leading-tight">
                         <CheckCircle2 className="w-3 h-3 text-emerald-500 shrink-0 mt-0.5" />
