@@ -5,6 +5,8 @@ import YounesPage from './src/pages/YounesPage';
 import ExperienceMapPage from './src/pages/ExperienceMap';
 import MatriceSolutionPage from './src/pages/MatriceSolution';
 
+
+
 const App = () => {
   return (
     <Router>
@@ -15,6 +17,8 @@ const App = () => {
         <Link to="/younes" className="hover:text-blue-400 transition-colors">Younes</Link>
         <Link to="/experience-map">Experience Map</Link>
         <Link to="/matrice-solution">Matrice</Link>
+
+
       </nav>
 
       <Routes>
@@ -27,6 +31,9 @@ const App = () => {
         <Route path="/younes" element={<YounesPage />} />
         <Route path="/experience-map" element={<ExperienceMapPage />} />
         <Route path="/matrice-solution" element={<MatriceSolutionPage/>} />
+
+
+
 
         {/* Optionnel : Redirection en cas de page inconnue */}
         <Route path="*" element={<MarinePage />} />
