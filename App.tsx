@@ -3,7 +3,9 @@ import MarinePage from './src/pages/MarinePage';
 import RomainPage from './src/pages/RomainPage';
 import YounesPage from './src/pages/YounesPage';
 import ExperienceMapPage from './src/pages/ExperienceMap';
+
 import MatriceSolutionPage from './src/pages/MatriceSolution';
+import BacklogPage from './src/pages/BacklogPage';
 
 
 
@@ -15,8 +17,9 @@ const App = () => {
         <Link to="/marine" className="hover:text-blue-400 transition-colors">Marine</Link>
         <Link to="/romain" className="hover:text-blue-400 transition-colors">Romain</Link>
         <Link to="/younes" className="hover:text-blue-400 transition-colors">Younes</Link>
-        <Link to="/experience-map">Experience Map</Link>
-        <Link to="/matrice-solution">Matrice</Link>
+        <Link to="/experience-map" className="hover:text-blue-400 transition-colors">Experience Map</Link>
+        <Link to="/matrice-solution" className="hover:text-blue-400 transition-colors">Matrice</Link>
+        <Link to="/backlog" className="hover:text-blue-400 transition-colors">Backlog</Link>
 
 
       </nav>
@@ -24,13 +27,14 @@ const App = () => {
       <Routes>
         {/* Route par défaut redirigeant vers Marine */}
         <Route path="/" element={<MarinePage />} />
-        
+
         {/* Routes spécifiques pour chaque persona */}
         <Route path="/marine" element={<MarinePage />} />
         <Route path="/romain" element={<RomainPage />} />
         <Route path="/younes" element={<YounesPage />} />
         <Route path="/experience-map" element={<ExperienceMapPage />} />
-        <Route path="/matrice-solution" element={<MatriceSolutionPage/>} />
+        <Route path="/matrice-solution" element={<MatriceSolutionPage />} />
+        <Route path="/backlog" element={<BacklogPage />} />
 
 
 
